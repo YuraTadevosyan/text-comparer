@@ -1,0 +1,6 @@
+{
+  "name": "TextComparer",
+  "description": "Professional text comparison tool for developers with side-by-side diffing, history, and light/dark modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
