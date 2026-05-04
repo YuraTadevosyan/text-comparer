@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="TextComparer — Professional text comparison tool">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <!-- Glow -->
+  <circle cx="950" cy="120" r="260" fill="url(#glow)"/>
+  <circle cx="180" cy="520" r="220" fill="url(#glow)" opacity="0.6"/>
+
+  <!-- Left content -->
+  <g transform="translate(70,120)">
+    <!-- Tag -->
+    <g>
+      <rect x="0" y="0" width="170" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+      <circle cx="18" cy="15" r="4" fill="#3b82f6"/>
+      <text x="32" y="20" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="12" font-weight="700" letter-spacing="2" fill="#93c5fd">DEVELOPER TOOL</text>
+    </g>
+
+    <!-- Title -->
+    <text x="0" y="100" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="76" font-weight="800" fill="#ffffff" letter-spacing="-2">Text<tspan fill="url(#accent)">Comparer</tspan></text>
+
+    <!-- Subtitle -->
+    <text x="0" y="150" font-family="ui-sans-serif, system-ui" font-size="22" fill="#94a3b8" font-weight="500">Spot every change between two pieces of text —</text>
+    <text x="0" y="180" font-family="ui-sans-serif, system-ui" font-size="22" fill="#94a3b8" font-weight="500">instantly, in your browser.</text>
+
+    <!-- Feature pills -->
+    <g transform="translate(0,220)" font-family="ui-sans-serif, system-ui" font-size="13" font-weight="700">
+      <g>
+        <rect x="0" y="0" width="160" height="36" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="80" y="23" text-anchor="middle" fill="#e2e8f0">Side-by-side diff</text>
+      </g>
+      <g transform="translate(170,0)">
+        <rect width="130" height="36" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="65" y="23" text-anchor="middle" fill="#e2e8f0">Local history</text>
+      </g>
+      <g transform="translate(310,0)">
+        <rect width="120" height="36" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="60" y="23" text-anchor="middle" fill="#e2e8f0">Dark mode</text>
+      </g>
+    </g>
+
+    <!-- Tech stack -->
+    <text x="0" y="320" font-family="ui-sans-serif, system-ui" font-size="12" font-weight="700" letter-spacing="3" fill="#475569">BUILT WITH</text>
+    <text x="0" y="345" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#cbd5e1">React 19  ·  TypeScript  ·  Vite  ·  Tailwind v4  ·  Motion</text>
+  </g>
+
+  <!-- Right side: mock diff card -->
+  <g transform="translate(700,90)">
+    <!-- Card -->
+    <rect x="0" y="0" width="450" height="420" rx="20" fill="url(#card)" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Window controls -->
+    <circle cx="22" cy="24" r="6" fill="#ef4444"/>
+    <circle cx="42" cy="24" r="6" fill="#f59e0b"/>
+    <circle cx="62" cy="24" r="6" fill="#10b981"/>
+    <text x="225" y="29" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#64748b">comparison.diff</text>
+
+    <!-- Divider -->
+    <line x1="0" y1="48" x2="450" y2="48" stroke="#1e293b"/>
+
+    <!-- Diff lines -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <!-- line 1 unchanged -->
+      <text x="20" y="78" fill="#475569">1</text>
+      <text x="50" y="78" fill="#94a3b8">function compare(a, b) {</text>
+
+      <!-- removal -->
+      <rect x="10" y="90" width="430" height="22" fill="#7f1d1d" opacity="0.25"/>
+      <text x="20" y="106" fill="#ef4444">2</text>
+      <text x="40" y="106" fill="#ef4444" font-weight="700">-</text>
+      <text x="55" y="106" fill="#fca5a5">  return a === b;</text>
+
+      <!-- additions -->
+      <rect x="10" y="118" width="430" height="22" fill="#14532d" opacity="0.3"/>
+      <text x="20" y="134" fill="#10b981">3</text>
+      <text x="40" y="134" fill="#10b981" font-weight="700">+</text>
+      <text x="55" y="134" fill="#86efac">  const diff = computeDiff(a, b);</text>
+
+      <rect x="10" y="146" width="430" height="22" fill="#14532d" opacity="0.3"/>
+      <text x="20" y="162" fill="#10b981">4</text>
+      <text x="40" y="162" fill="#10b981" font-weight="700">+</text>
+      <text x="55" y="162" fill="#86efac">  return diff.length === 0;</text>
+
+      <!-- unchanged -->
+      <text x="20" y="190" fill="#475569">5</text>
+      <text x="50" y="190" fill="#94a3b8">{'}'}</text>
+
+      <text x="20" y="218" fill="#475569">6</text>
+      <text x="50" y="218" fill="#94a3b8"></text>
+
+      <text x="20" y="246" fill="#475569">7</text>
+      <text x="50" y="246" fill="#94a3b8">// usage</text>
+
+      <!-- modified -->
+      <rect x="10" y="258" width="430" height="22" fill="#7f1d1d" opacity="0.25"/>
+      <text x="20" y="274" fill="#ef4444">8</text>
+      <text x="40" y="274" fill="#ef4444" font-weight="700">-</text>
+      <text x="55" y="274" fill="#fca5a5">compare("hello", "world");</text>
+
+      <rect x="10" y="286" width="430" height="22" fill="#14532d" opacity="0.3"/>
+      <text x="20" y="302" fill="#10b981">9</text>
+      <text x="40" y="302" fill="#10b981" font-weight="700">+</text>
+      <text x="55" y="302" fill="#86efac">compare("hello", "hello");</text>
+    </g>
+
+    <!-- Stats footer -->
+    <line x1="0" y1="335" x2="450" y2="335" stroke="#1e293b"/>
+    <g transform="translate(20,355)" font-family="ui-sans-serif, system-ui" font-size="11" font-weight="700">
+      <g>
+        <rect width="92" height="48" rx="8" fill="#0f172a" stroke="#1e293b"/>
+        <text x="10" y="20" fill="#64748b" letter-spacing="1.5">SIMILARITY</text>
+        <text x="10" y="40" fill="#3b82f6" font-size="16">68%</text>
+      </g>
+      <g transform="translate(102,0)">
+        <rect width="92" height="48" rx="8" fill="#0f172a" stroke="#1e293b"/>
+        <text x="10" y="20" fill="#64748b" letter-spacing="1.5">ADDED</text>
+        <text x="10" y="40" fill="#10b981" font-size="16">+3</text>
+      </g>
+      <g transform="translate(204,0)">
+        <rect width="92" height="48" rx="8" fill="#0f172a" stroke="#1e293b"/>
+        <text x="10" y="20" fill="#64748b" letter-spacing="1.5">REMOVED</text>
+        <text x="10" y="40" fill="#ef4444" font-size="16">-2</text>
+      </g>
+      <g transform="translate(306,0)">
+        <rect width="104" height="48" rx="8" fill="#0f172a" stroke="#1e293b"/>
+        <text x="10" y="20" fill="#64748b" letter-spacing="1.5">CHANGED</text>
+        <text x="10" y="40" fill="#f59e0b" font-size="16">5</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom line -->
+  <rect x="0" y="595" width="1200" height="5" fill="url(#accent)"/>
+</svg>
